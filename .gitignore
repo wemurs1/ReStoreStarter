@@ -453,3 +453,5 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 ReStore/API/store.db
+ReStore/API/store.db-wal
+ReStore/API/store.db-shm

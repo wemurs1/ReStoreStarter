@@ -7,7 +7,13 @@ function App() {
   ]);
 
   function addProduct() {
-    setProducts([...products, { name: 'product3', price: 300.0 }]);
+    setProducts((prevstate) => [
+      ...prevstate,
+      {
+        name: 'product' + (prevstate.length + 1),
+        price: prevstate.length * 100 + 100,
+      },
+    ]);
   }
 
   return (

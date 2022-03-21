@@ -59,12 +59,15 @@ export default function BasketPage() {
                 </TableCell>
                 <TableCell align='center'>
                   <LoadingButton
-                    loading={status === 'pendingRemoveItem' + item.productId}
+                    loading={
+                      status === 'pendingRemoveItem' + item.productId + 'rem'
+                    }
                     onClick={() =>
                       dispatch(
                         removeBasketItemAsync({
                           productId: item.productId,
                           quantity: 1,
+                          name: 'rem',
                         })
                       )
                     }

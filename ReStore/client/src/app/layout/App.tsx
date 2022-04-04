@@ -22,6 +22,7 @@ import Register from '../../features/account/Register';
 import { fetchCurrentUser } from '../../features/account/accountSlice';
 import PrivateRoute from './PrivateRoute';
 import OrderList from '../../features/orders/OrderList';
+import OrderDetail from '../../features/orders/OrderDetail';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -73,7 +74,8 @@ function App() {
           <Route path='/server-error' component={ServerError} />
           <Route path='/basket' component={BasketPage} />
           <PrivateRoute path='/checkout' component={CheckoutPage} />
-          <PrivateRoute path='/orders' component={OrderList} />
+          <PrivateRoute exact path='/orders' component={OrderList} />
+          <PrivateRoute path='/orders/:id' component={OrderDetail} />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
           <Route component={NotFound} />

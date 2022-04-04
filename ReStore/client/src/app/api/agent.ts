@@ -1,3 +1,4 @@
+import { PanoramaSharp } from '@mui/icons-material';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { toast } from 'react-toastify';
 import { history } from '../..';
@@ -94,7 +95,7 @@ const Account = {
 };
 
 const Orders = {
-  list: () => requests.get('orders'),
+  list: (params: URLSearchParams) => requests.get('orders', params),
   fetch: (id: number) => requests.get(`orders/${id}`),
   create: (values: any) => requests.post('orders', values),
 };

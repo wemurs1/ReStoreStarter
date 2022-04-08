@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import Slider from 'react-slick';
+import Carousel from 'react-material-ui-carousel';
 
 export default function HomePage() {
   const settings = {
@@ -11,7 +11,7 @@ export default function HomePage() {
   };
   return (
     <>
-      <Slider {...settings}>
+      <Carousel>
         <div>
           <img
             src='/images/hero1.jpg'
@@ -33,7 +33,7 @@ export default function HomePage() {
             style={{ display: 'block', width: '100%', maxHeight: 500 }}
           />
         </div>
-      </Slider>
+      </Carousel>
       <Box display='flex' justifyContent='center' sx={{ p: 4 }}>
         <Typography variant='h1'>Welcome to the shop!</Typography>
       </Box>

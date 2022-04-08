@@ -2,13 +2,6 @@ import { Box, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 export default function HomePage() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <>
       <Carousel>

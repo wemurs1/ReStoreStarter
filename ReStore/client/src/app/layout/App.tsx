@@ -23,6 +23,7 @@ import PrivateRoute from './PrivateRoute';
 import OrderList from '../../features/orders/OrderList';
 import OrderDetail from '../../features/orders/OrderDetail';
 import CheckoutWrapper from '../../features/checkout/CheckoutWrapper';
+import Inventory from '../../features/admin/Inventory';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -79,6 +80,7 @@ function App() {
               <PrivateRoute path='/checkout' component={CheckoutWrapper} />
               <PrivateRoute exact path='/orders' component={OrderList} />
               <PrivateRoute path='/orders/:id' component={OrderDetail} />
+              <PrivateRoute exact path='/inventory' component={Inventory} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route component={NotFound} />

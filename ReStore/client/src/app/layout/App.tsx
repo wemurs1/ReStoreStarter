@@ -80,7 +80,11 @@ function App() {
               <PrivateRoute path='/checkout' component={CheckoutWrapper} />
               <PrivateRoute exact path='/orders' component={OrderList} />
               <PrivateRoute path='/orders/:id' component={OrderDetail} />
-              <PrivateRoute exact path='/inventory' component={Inventory} />
+              <PrivateRoute
+                roles={['Admin']}
+                path='/inventory'
+                component={Inventory}
+              />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route component={NotFound} />
